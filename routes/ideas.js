@@ -5,11 +5,11 @@ const checkAuth = require('../middleware/check-auth');
 var _ = require('lodash');
 const http = require('http');
 const url = require('url');
+const airtableKey = require('APIKEY')
 
 
 var Airtable = require("airtable");
-var base = new Airtable({ apiKey: "key0VrKMllc8RRhsB" }).base(
-  "app1sQyN5jHMVqrrI"
+var base = new Airtable({ apiKey: airtableKey.key}).base(airtableKey.base
 );
 
 const ideas = base("Ideas");
