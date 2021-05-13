@@ -1,0 +1,6 @@
+{
+    "env": {
+        "MONGO_ATLAS_PW": "8Lf97CqigZcfahCc",
+        "JWT_KEY": "la_verdad_me_mata_tener_que_escribir_todo_esto_para_poder_generar_un_token"
+    }
+}
