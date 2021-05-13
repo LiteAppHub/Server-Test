@@ -6,8 +6,8 @@ var _ = require('lodash')
 
 var Airtable = require("airtable");
 const multer = require('multer');
-var base = new Airtable({ apiKey: "key0VrKMllc8RRhsB" }).base(
-  "app1sQyN5jHMVqrrI"
+const airtableKey = require('../models/airtableAPI')
+var base = new Airtable({ apiKey: airtableKey.key}).base(airtableKey.base
 );
 
 const groups = base("Groups");

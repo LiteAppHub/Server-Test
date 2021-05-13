@@ -5,7 +5,7 @@ const checkAuth = require('../middleware/check-auth');
 var _ = require('lodash');
 const http = require('http');
 const url = require('url');
-const airtableKey = require('APIKEY')
+const airtableKey = require('../models/airtableAPI')
 
 
 var Airtable = require("airtable");

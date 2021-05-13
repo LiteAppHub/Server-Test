@@ -5,8 +5,8 @@ const jwt = require('jsonwebtoken');
 const User = require('../models/user');
 var Airtable = require("airtable");
 const { post } = require('./activate');
-var base = new Airtable({ apiKey: "key0VrKMllc8RRhsB" }).base(
-  "app1sQyN5jHMVqrrI"
+const airtableKey = require('../models/airtableAPI')
+var base = new Airtable({ apiKey: airtableKey.key}).base(airtableKey.base
 );
 
 const users = base("Teams");
