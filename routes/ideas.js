@@ -15,7 +15,11 @@ var base = new Airtable({ apiKey: airtableKey.key}).base(airtableKey.base
 const ideas = base("Ideas");
 
 _router.get("/list", checkAuth, async (req, res, next) => {
-  const filter = "({IdeaAuthor} = '" + req.userData.email + "')"
+ 
+  // const filter = "({IdeaAuthor} = '" + req.userData.email + "')" 
+  const filter = 'OR(SEARCH("'+req.userData.email+'", {IdeaTeam},0) > 0, {IdeaAuthor} = "'+req.userData.email+'")'
+  
+  
   console.log('ideas requested by', req.userData.email)
   try{
   
